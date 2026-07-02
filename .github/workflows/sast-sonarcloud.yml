@@ -32,3 +32,4 @@ jobs:
           organization: ${{ secrets.SONAR_ORG }}
           projectKey: ${{ secrets.SONAR_PROJECT }}
           token: ${{ secrets.SONAR_TOKEN }}
+
