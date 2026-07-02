@@ -19,7 +19,7 @@ app.get('/token', (req, res) => {
 app.get('/calc', (req, res) => {
   const expr = req.query.expr || '2+2';
  // Insecure eval
-  const result = eval(expr);
+  const safe = expr.match(/^[0-9+\-*/ ().]+$/) ? Function(`return ${expr}`)() : null
   res.json({ result });
 });
 
